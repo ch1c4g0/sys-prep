@@ -1,3 +1,6 @@
+#Use these commands to resolve a computer that was removed from an active directory domain.
+    #Specifically stale update GPO's that block you from installing updates on your own.
+
 # Backup the Windows Update policy keys first
 reg export "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" "$env:TEMP\WindowsUpdatePolicyBackup.reg" /y
 reg export "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" "$env:TEMP\WindowsUpdateAUPolicyBackup.reg" /y
